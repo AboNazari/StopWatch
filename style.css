@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  padding: 1.5rem;
+  background-color: dodgerblue;
+  width: 100%;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+a {
+  background-color: rgb(110, 163, 216);
+  padding: 1rem;
+  border-radius: 10px;
+}
+a:hover {
+  background-color: forestgreen;
+  transition: ease-in 1s;
+}
+
+#bgChange {
+  display: flex;
+  background-color: rgb(194, 181, 181);
+  width: 6rem;
+  border-radius: 2rem;
+}
+
+.option {
+  width: 50%;
+  height: 100%;
+  border-radius: 50%;
+}
+.white {
+  background-color: white;
+}
+.black {
+  background-color: black;
+}
+
+main {
+  position: relative;
+  display: grid;
+  margin: 20%;
+  justify-content: center;
+  background-color: rgb(56, 55, 55);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+main h1 {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+#showTimer {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+  gap: 1rem;
+}
+#controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+#controls button {
+  padding: 5px 15px;
+  border: 1px solid dodgerblue;
+  background-color: dodgerblue;
+  color: white;
+  border-radius: 5px;
+}
+
+#start:hover,
+#start:focus,
+#stop:hover,
+#stop:focus,
+#reset:hover {
+  background-color: rgb(104, 164, 224);
+  border: 1px solid rgb(104, 164, 224);
+}
+@media only screen and (max-width: 500px) {
+  main {
+    margin: 40% 10%;
+  }
+  #bgChange {
+    width: 3rem;
+    border-radius: 1rem;
+    height: 2rem;
+  }
+  header {
+    padding: 10px;
+  }
+  a {
+    padding: 8px;
+  }
+}
