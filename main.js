@@ -1,3 +1,6 @@
+import { start } from "./stopWatch.js";
+
+// The bg-Color changer
 const black = document.getElementById("black");
 const white = document.getElementById("white");
 const body = document.body;
@@ -27,3 +30,5 @@ function changeBgColor(e) {
     white.style.zIndex = "1";
   }
 }
+
+// Stop watch dom controls
