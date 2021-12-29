@@ -27,15 +27,19 @@ function timer() {
     mn++;
     sc = 0;
     second.innerHTML = sc;
-    minute.innerHTML = mn;
+    minute.innerHTML = "0" + mn;
   }
   if (mn > 59) {
     hr++;
     mn = 0;
+    hour.innerHTML = "0" + hr;
+  }
+  if (hr > 9) {
     hour.innerHTML = hr;
   }
   mSecond.innerHTML = "0" + msc;
 }
+
 let interval;
 const startTimer = () => {
   interval = setInterval(timer, 100);
@@ -44,5 +48,19 @@ const startTimer = () => {
 const stopTimer = () => {
   clearInterval(interval);
 };
+
+const resetTimer = () => {
+  mSecond.innerHTML = "0" + 0;
+  second.innerHTML = "0" + 0;
+  minute.innerHTML = "0" + 0;
+  hour.innerHTML = "0" + 0;
+  ms = 0;
+  sc = 0;
+  mn = 0;
+  hr = 0;
+  stopTimer();
+};
+
 start.addEventListener("click", startTimer);
 stop.addEventListener("click", stopTimer);
+reset.addEventListener("click", resetTimer);

@@ -41,6 +41,8 @@ p {
   background-color: #ca6038;
   border: 1px solid #ca6038;
   color: white;
+
+  box-shadow: -6px -6px 13px #a2492a, 6px 6px 13px #e8693c;
 }
 .btn:hover {
   background-color: #53140d;
