@@ -16,29 +16,33 @@ function timer() {
   msc++;
   if (msc > 9) {
     sc++;
+    mSecond.innerHTML = msc;
+    second.innerHTML = "0" + sc;
     msc = 0;
   }
-  if (sc > 59) {
+  if (sc > 9) {
+    second.innerHTML = sc;
+  }
+  if (sc > 60) {
     mn++;
     sc = 0;
+    second.innerHTML = sc;
+    minute.innerHTML = mn;
   }
   if (mn > 59) {
     hr++;
     mn = 0;
+    hour.innerHTML = hr;
   }
-  console.log(msc);
-  mSecond.innerHTML = msc;
-  second.innerHTML = sc;
-  minute.innerHTML = mn;
-  hour.innerHTML = hr;
+  mSecond.innerHTML = "0" + msc;
 }
-
+let interval;
 const startTimer = () => {
-  setInterval(timer(), 100);
+  interval = setInterval(timer, 100);
 };
 
 const stopTimer = () => {
-  clearInterval();
+  clearInterval(interval);
 };
 start.addEventListener("click", startTimer);
 stop.addEventListener("click", stopTimer);
