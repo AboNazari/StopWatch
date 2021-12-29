@@ -4,33 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="main.js" type="module"></script>
     <link rel="stylesheet" href="style.css" />
     <title>StopWatch</title>
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="#">NAZARI Home Page</a>
-        <div id="bgChange">
-          <div class="option black" id="black"></div>
-          <div class="option white" id="white"></div>
-        </div>
-      </nav>
-    </header>
-    <main>
-      <h1>Stop Watch</h1>
-      <div id="showTimer">
-        <span id="hour">1H</span>
-        <span id="minute">M</span>
-        <span id="second">5S</span>
-        <span id="milisecond">5ml</span>
+    <div id="wrapper">
+      <img src="./clock.jpg" alt="clock" />
+      <div id="stopWatch">
+        <p>
+          <span class="hr">00</span> : <span class="min">00</span> :
+          <span class="sec">00</span> : <span class="msec">00</span>
+        </p>
       </div>
       <div id="controls">
-        <button id="start">Start</button>
-        <button id="stop">Stop</button>
-        <button id="reset">Reset</button>
+        <button class="btn start">Start</button>
+        <button class="btn stop">Stop</button>
+        <button class="btn reset">Reset</button>
       </div>
-    </main>
+    </div>
   </body>
+  <script src="./script.js" />
 </html>

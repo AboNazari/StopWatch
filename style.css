@@ -1,107 +1,49 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
-}
-a {
-  text-decoration: none;
-  color: black;
+  box-sizing: border-box;
 }
 
-header {
-  position: fixed;
-  top: 0;
-  padding: 1.5rem;
-  background-color: dodgerblue;
-  width: 100%;
-}
-nav {
-  display: flex;
-  justify-content: space-between;
-}
-a {
-  background-color: rgb(110, 163, 216);
-  padding: 1rem;
-  border-radius: 10px;
-}
-a:hover {
-  background-color: forestgreen;
-  transition: ease-in 1s;
-}
-
-#bgChange {
-  display: flex;
-  background-color: rgb(194, 181, 181);
-  width: 6rem;
-  border-radius: 2rem;
-}
-
-.option {
-  width: 50%;
-  height: 100%;
-  border-radius: 50%;
-}
-.white {
-  background-color: white;
-}
-.black {
-  background-color: black;
-}
-
-main {
+#wrapper {
   position: relative;
-  display: grid;
-  margin: 20%;
-  justify-content: center;
-  background-color: rgb(56, 55, 55);
-  padding: 2rem;
-  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
 }
-main h1 {
-  margin-bottom: 3rem;
-  text-align: center;
+img {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
-#showTimer {
-  display: flex;
-  justify-content: center;
-  margin: 2rem;
-  gap: 1rem;
+#stopWatch {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  z-index: 2;
 }
-#controls {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 1rem;
-}
-#controls button {
-  padding: 5px 15px;
-  border: 1px solid dodgerblue;
-  background-color: dodgerblue;
-  color: white;
-  border-radius: 5px;
+p {
+  font-size: 3rem;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  user-select: none;
 }
 
-#start:hover,
-#start:focus,
-#stop:hover,
-#stop:focus,
-#reset:hover {
-  background-color: rgb(104, 164, 224);
-  border: 1px solid rgb(104, 164, 224);
+#controls {
+  position: absolute;
+  top: 30%;
+  left: 10%;
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
 }
-@media only screen and (max-width: 500px) {
-  main {
-    margin: 40% 10%;
-  }
-  #bgChange {
-    width: 3rem;
-    border-radius: 1rem;
-    height: 2rem;
-  }
-  header {
-    padding: 10px;
-  }
-  a {
-    padding: 8px;
-  }
+.btn {
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.5rem;
+  background-color: #ca6038;
+  border: 1px solid #ca6038;
+  color: white;
+}
+.btn:hover {
+  background-color: #53140d;
+  border: 1px solid #53140d;
+  transition: all 0.5s ease-in;
 }
